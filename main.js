@@ -19,7 +19,7 @@ client.once('ready',() => {
     console.log('TestBotAnand is online');
 });
 
-client.on('message', message =>{
+client.on('messageCreate', message =>{
     if(!message.content.startsWith(prefix) || message.author.bot) return;
 
     const args = message.content.slice(prefix.length).split(/ +/);
@@ -33,4 +33,4 @@ client.on('message', message =>{
 });
 
 
-client.login('OTE4NzEwOTE0MzUyNTQ5OTM5.YbLONg.vzWJTgq4hY25gB8z8Zymr23aROU');
+client.login('OTE4NzEwOTE0MzUyNTQ5OTM5.YbLONg.1fvL6sGqnsfq85cBaHZRR5usB8s');
