@@ -5,6 +5,7 @@ const client = new Discord.Client({ intents: ["GUILDS", "GUILD_MESSAGES"] })
 const prefix = 'r!';
 
 const fs = require('fs');
+const { isGeneratorFunction } = require('util/types');
 
 client.commands = new Discord.Collection();
 
@@ -16,7 +17,7 @@ for(const file of commandFiles){
 }
 
 client.once('ready',() => {
-    console.log('TestBotAnand is online');
+    console.log('TestBot is online');
 });
 
 client.on('messageCreate', message =>{
@@ -29,6 +30,8 @@ client.on('messageCreate', message =>{
         client.commands.get('kick').execute(message, args);
     } else if(command === 'tempmute'){
         client.commands.get('tempmute').execute(message, args);
+    } else if(command === 'membercount'){
+        client.commands.get('membercount').execute(message, args);
     }
 });
 
