@@ -32,6 +32,8 @@ client.on('messageCreate', message =>{
         client.commands.get('tempmute').execute(message, args);
     } else if(command === 'membercount'){
         client.commands.get('membercount').execute(message, args);
+    } else if(command === 'rolecount'){
+        client.commands.get('rolecount').execute(message, args);
     }
 });
 
